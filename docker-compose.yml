@@ -1,0 +1,43 @@
+version: '3.7'
+
+volumes:
+  web_data:
+    name: symfony_vendor
+
+services:
+  symfony_web:
+    image: symfony_web
+    container_name: havlikvojtech_symfony_web
+    hostname: "havlik_web.ssemi.cz"
+    build:
+      context: ./docker
+      dockerfile: ./Dockerfile.dev
+    depends_on:
+      - symfony_mysql
+
+    ports:
+      - "83:80" # HOST_PORT:CONTAINER_PORT
+    #    network_mode: "host" # sdileni localhost s hostem, pozor na konflikt portu, viz. apache.ports.conf a apache.vhost.conf, nefunguje na ios
+    volumes:
+      - web_data:/var/www/html/vendor
+      - ./web:/var/www/html
+      - ./docker/php.ini:/usr/local/etc/php/php.ini
+      - ./log:/var/log/nette:rw
+      - ./docker/apache.ports.conf:/etc/apache2/ports.conf
+      - ./docker/apache.vhost.conf:/etc/apache2/sites-enabled/vhost.conf
+  symfony_mysql:
+    image: mariadb:latest
+    container_name: havlikvojtech_symfony_mysql
+    hostname: "havlik_mysql.ssemi.cz"
+    ports:
+      - 3308:330
+    environment:
+      MYSQL_ROOT_PASSWORD: pokus
+      MYSQL_DATABASE: pokus
+      MYSQL_USER: pokus
+      MYSQL_PASSWORD: pokus
+    volumes:
+      - ./data/database:/var/lib/mysql
+      - ./docker/mysql/mariadb.cnf:/etc/mysql/mariadb.cnf
+
+

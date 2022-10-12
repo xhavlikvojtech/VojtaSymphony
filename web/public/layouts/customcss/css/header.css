@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border: solid 1px black;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.navigation ul{
+    display: flex;
+    gap: 40px;
+}
+
+.navigation ul, li, a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    transition: ease-in-out .4s;
+}
+
+h1{
+    text-transform: uppercase;
+    color: white;
+}
+
+.navigation ul, li, a:hover{
+    color: red;
+}

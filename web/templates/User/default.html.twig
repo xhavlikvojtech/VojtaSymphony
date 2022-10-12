@@ -1,0 +1,59 @@
+{% block header %}
+
+    {% include "User/header.html.twig" %}
+
+{% endblock %}
+
+{% block body %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport">
+        <title>Přihlášení</title>
+    </head>
+    <body>
+    <div class="container">
+        <div class="karta">
+            <h3>Přihlášení</h3>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Uživatelské Jméno</span>
+            </div>
+
+            <div class="inputBox2">
+                <input type="password" required="required">
+                <span>Heslo</span>
+            </div>
+
+            <div class="button">
+                <button id="tlacitko" type="submit">Přihlásit se</button>
+            </div>
+
+        </div>
+    </div>
+    </body>
+    </html>
+{% endblock %}
+
+{% block footer %}
+
+    {% include "User/footer.html.twig" %}
+
+{% endblock %}
+
+
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ url("homepage_default") }}layouts/customcss/css/login.css">
+    <link rel="stylesheet" href="{{ url("homepage_default") }}layouts/customcss/css/login2.css">
+    <link rel="stylesheet" href="{{ url("homepage_default") }}layouts/customcss/css/header.css">
+    <link rel="stylesheet" href="{{ url("homepage_default") }}layouts/customcss/css/footer.css">
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ url("homepage_default") }}layouts/customcss/js/button.js"></script>
+
+{% endblock %}
