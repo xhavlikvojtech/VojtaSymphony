@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use layout\spacelab;
 
-class BartaController extends BaseController
+class HavlikVojtechController extends BaseController
 {
     /**
      * @return Response

@@ -355,7 +355,13 @@
         <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\BaseController"/>
       </call>
     </service>
-    <service id="App\Controller\HavlikVojtechController" class="App\Controller\HavlikVojtechController" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\HavlikVojtechController" class="App\Controller\HavlikVojtechController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.l1ae.Qz.App\Controller\HavlikVojtechController"/>
+      </call>
+    </service>
     <service id="App\Controller\HomepageController" class="App\Controller\HomepageController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6039,6 +6045,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\BaseController" class="App\Controller\BaseController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\BaseController" class="App\Controller\BaseController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\BaseController" class="App\Controller\BaseController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HavlikVojtechController" class="App\Controller\HavlikVojtechController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HavlikVojtechController" class="App\Controller\HavlikVojtechController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\HavlikVojtechController" class="App\Controller\HavlikVojtechController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomepageController" class="App\Controller\HomepageController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6782,6 +6791,12 @@
     <service id=".service_locator.l1ae.Qz.App\Controller\BaseController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\BaseController"/>
       <argument>App\Controller\BaseController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.l1ae.Qz" method="withContext"/>
+    </service>
+    <service id=".service_locator.l1ae.Qz.App\Controller\HavlikVojtechController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\HavlikVojtechController"/>
+      <argument>App\Controller\HavlikVojtechController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.l1ae.Qz" method="withContext"/>
     </service>
