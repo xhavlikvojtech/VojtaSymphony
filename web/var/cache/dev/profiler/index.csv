@@ -681,3 +681,9 @@ e97827,172.20.0.1,GET,http://localhost:83/xhavlikvojtech_default,1665994407,,200
 c358af,172.20.0.1,GET,http://localhost:83/xhavlikvojtech_edit,1665994423,,200
 df1674,172.20.0.1,GET,http://localhost:83/xhavlikvojtech_detail,1665994427,,200
 d39ec9,172.18.0.1,GET,http://localhost:83/,1665997053,,200
+cf6c63,172.18.0.1,GET,http://localhost:83/,1667208300,,200
+bdc703,172.18.0.1,GET,http://localhost:83/xhavlikvojtech_default,1667208305,,200
+a1d010,172.18.0.1,GET,http://localhost:83/favicon.ico,1667208307,959c87,404
+959c87,172.18.0.1,GET,http://localhost:83/favicon.ico,1667208307,,404
+c1b54b,172.18.0.1,GET,http://localhost:83/xhavlikvojtech_new,1667208314,,200
+2f99b3,172.18.0.1,GET,http://localhost:83/xhavlikvojtech_edit,1667208318,,200

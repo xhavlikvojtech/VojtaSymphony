@@ -2,13 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\Address;
-use App\Entity\Cities;
-use App\Entity\Users;
+use App\Entity\City;
+use App\Entity\House;
+use App\Entity\User;
+use App\Entity\Village;
 use App\Form\AddressFormType;
-use App\Repository\AddressRepository;
-use App\Repository\CitiesRepository;
-use App\Repository\UsersRepository;
+use App\Repository\CityRepository;
+use App\Repository\HouseRepository;
+use App\Repository\UserRepository;
+use App\Repository\VillageRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Asset\UrlPackage;
 use Symfony\Component\Form\FormBuilder;
