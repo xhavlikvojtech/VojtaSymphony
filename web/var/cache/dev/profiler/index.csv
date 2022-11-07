@@ -687,3 +687,4 @@ a1d010,172.18.0.1,GET,http://localhost:83/favicon.ico,1667208307,959c87,404
 959c87,172.18.0.1,GET,http://localhost:83/favicon.ico,1667208307,,404
 c1b54b,172.18.0.1,GET,http://localhost:83/xhavlikvojtech_new,1667208314,,200
 2f99b3,172.18.0.1,GET,http://localhost:83/xhavlikvojtech_edit,1667208318,,200
+a80446,172.18.0.1,GET,http://localhost:83/,1667811513,,200
