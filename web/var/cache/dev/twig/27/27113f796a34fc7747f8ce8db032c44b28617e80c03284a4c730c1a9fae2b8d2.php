@@ -491,7 +491,9 @@ class __TwigTemplate_60d60682181caaec1fff0d92644487e7f3738db0127ff1d988389d19b80
         echo twig_escape_filter($this->env, (isset($context["layout"]) || array_key_exists("layout", $context) ? $context["layout"] : (function () { throw new RuntimeError('Variable "layout" does not exist.', 298, $this->source); })()), "html", null, true);
         echo "/js/script.js\" defer></script>
 </body>
-</html>";
+</html>
+
+<!-- dddddd -->";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -816,6 +818,8 @@ class __TwigTemplate_60d60682181caaec1fff0d92644487e7f3738db0127ff1d988389d19b80
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
         <script src=\"{{ url(\"homepage_default\") }}layouts/{{ layout }}/js/script.js\" defer></script>
 </body>
-</html>", "base.html.twig", "/var/www/html/templates/base.html.twig");
+</html>
+
+<!-- dddddd -->", "base.html.twig", "/var/www/html/templates/base.html.twig");
     }
 }
